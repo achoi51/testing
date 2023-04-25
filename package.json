@@ -7,6 +7,7 @@
     "license": "GNU GPLv3",
     "private": true,
     "type": "module",
+    "homepage": "https://achoi51.github.io/testing",
     "dependencies": {
         "jasmine": "^4.4.0",
         "parcel": "^2.7.0",
@@ -15,10 +16,13 @@
     "scripts": {
         "start": "parcel index.html",
         "build": "parcel build index.html",
-        "test": "jasmine tests.js"
+        "test": "jasmine tests.js",
+        "predeploy": "yarn run build",
+        "deploy": "gh-pages -d build"
     },
     "devDependencies": {
         "@parcel/packager-raw-url": "2.7.0",
-        "@parcel/transformer-webmanifest": "2.7.0"
+        "@parcel/transformer-webmanifest": "2.7.0",
+        "gh-pages": "^5.0.0"
     }
 }
